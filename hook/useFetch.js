@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import { PAPID_API_KEY } from "@env";
+import { RAPID_API_KEY } from "@env";
 
-const rapidApiKey = PAPID_API_KEY;
+const rapidApiKey = RAPID_API_KEY;
 
 const useFetch = (endpoint, query) => {
   const [data, setData] = useState([]);
