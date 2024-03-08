@@ -15,6 +15,9 @@ import useFetch from "../../../hook/useFetch";
 
 const Popularjobs = () => {
   const router = useRouter();
+  // const isLoading = false;
+  // const error = false;
+  // const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const { data, isLoading, error } = useFetch("search", {
     query: "React developer",
     num_pages: "1",
@@ -40,7 +43,7 @@ const Popularjobs = () => {
         {isLoading ? (
           <ActivityIndicator size="large" color={COLORS.primary} />
         ) : error ? (
-          <Text>Something went wrong</Text>
+          <Text>Щось пішло не так...</Text>
         ) : (
           <FlatList
             data={data}
